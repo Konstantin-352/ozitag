@@ -1,0 +1,9 @@
+# Server options
+SERVER_HOST=localhost
+SERVER_PORT=9003
+SERVER_SSL=false
+SERVER_LIVERELOAD=false
+
+# Paths
+PATH_DIST_NAME=dist
+PATH_SRC_NAME=src

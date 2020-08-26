@@ -1,0 +1,195 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0 13.6rem;
+    box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, .1);
+    z-index: 999;
+
+    @media screen and (max-width: 1249px) {
+        padding: 1.6rem .8rem;
+    }
+}
+
+body {
+
+    &.__shadow-show {
+
+        .shadow {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.__menu-open {
+
+        .menu {
+
+            &-line {
+                transition: top .2s, transform .2s .2s;
+                top: calc(50% - .2rem);
+                background: #ff9900;
+
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2),
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .header {
+
+            &-nav {
+                top: 5.2rem
+            }
+        }
+    }
+}
+
+.header {
+
+    &-nav {
+        position: relative;
+
+        @media screen and (max-width: 1249px) {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: -100%;
+            background: #fff;
+            max-height: calc(100% - 5.2rem);
+            overflow-y: auto;
+            transition: all .2s ease-in-out;
+        }
+
+        &_arrow {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-left: .2rem solid rgba(51, 51, 51, .2);
+
+            &:after {
+                content: '';
+                padding: .5rem;
+                border: .2rem solid rgba(51, 51, 51, .7);
+                border-bottom: 0;
+                border-left: 0;
+                transform: rotate(135deg);
+                margin-top: -.4rem;
+            }
+        }
+
+        &_link {
+            padding: 1.6rem 0;
+            display: block;
+            border: {
+                bottom: .3rem solid rgba(255, 255, 255, .0001);
+            }
+            transition: all .2s ease-in-out;
+
+            @media screen and (max-width: 1249px) {
+                border-bottom: 0;
+            }
+
+            &-text {
+                transition: all .2s ease-in-out;
+                font: {
+                    size: 1.6rem;
+                }
+            }
+        }
+
+        &_item {
+            margin: 0 2.4rem;
+
+            @media screen and (max-width: 1249px) {
+                margin: 0 .8rem;
+            }
+
+            &.__hover {
+
+                .header-nav {
+
+                    &_link {
+                        border: {
+                            color: #ff9900;
+                        }
+
+                        &-text {
+                            background: rgba(51, 51, 51, .1);
+                        }
+                    }
+
+                    &_wrap {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        &_block {
+            width: 16.6%;
+            padding: {
+                right: 2.4rem;
+            };
+
+            @media screen and (max-width: 1249px) {
+                width: 100%;
+                padding: 0 .8rem;
+                background: rgba(51, 51, 51, .1);
+                border-bottom: .1rem solid rgba(51, 51, 51, .2);
+
+                &-link {
+                    padding: 1.6rem 0;
+                    display: block;
+                }
+            }
+        }
+
+        &_wrap {
+            background: #fff;
+            transition: all .2s ease-in-out;
+
+            @media screen and (min-width: 1250px) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                padding: 2.4rem 1.6rem;
+            }
+
+            @media screen and (max-width: 1249px) {
+                margin: 0 -.8rem;
+            }
+        }
+
+        &_subitem {
+
+            @media screen and (min-width: 1250px) {
+                font: {
+                    size: 1.2rem;
+                }
+                color: rgba(51, 51, 51, .8);
+                padding: {
+                    top: .8rem;
+                };
+            }
+
+            @media screen and (max-width: 1249px) {
+                padding: 1.6rem 2.4rem;
+                margin: 0 -.8rem;
+                border: {
+                    top: .1rem solid rgba(51, 51, 51, .2);
+                };
+            }
+        }
+    }
+}

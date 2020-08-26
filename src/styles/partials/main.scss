@@ -1,0 +1,80 @@
+/* ALL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: {
+        size: 10px;
+    }
+}
+
+body {
+    font: {
+        family: 'Circe', sans-serif;
+        size: 1.4rem;
+        weight: 400;
+    }
+    margin: 0 auto;
+    background: #fff;
+    line-height: 125%;
+    color: #333;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+}
+
+main {
+    padding: 6.4rem 12rem;
+
+    @media screen and (max-width: 1249px) {
+        padding: 6.4rem 2.4rem;
+    }
+}
+
+.menu {
+    position: relative;
+    cursor: pointer;
+    width: 3rem;
+    height: 2rem;
+    margin-left: auto;
+
+    &-line {
+        position: absolute;
+        width: 100%;
+        background: #000;
+        height: .4rem;
+        transition: top .2s .2s, transform .2s, background .2s;
+
+        &:first-child {
+            top: 0;
+        }
+
+        &:last-child {
+            top: calc(100% - .4rem);
+        }
+
+        &:nth-child(2) {
+            top: calc(50% - .2rem);
+        }
+    }
+}
+
+
